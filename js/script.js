@@ -1,39 +1,44 @@
 // esercizio dell'email 
 
  const listaMail = ['primo@gmail.com' , 'secondo@gmail.com' , 'terzo@gmail.com'];
-
- const userMail = prompt('Inserire email');
+ const sendBtn = document.getElementById('send');
+ const userMail = document.getElementById('user-mail').value;
 
 
 // metodo lungo funzionante
-
-// for(let i = 0 ; i < listaMail.length ; i++){
+sendBtn.addEventListener('click' , function(){
+  for(let i = 0 ; i < listaMail.length ; i++){
   
-//   if(userMail === 'primo@gmail.com'){
-//     console.log('mail valida');
-
-//   }else if (userMail === 'secondo@gmail.com'){
-//     console.log('mail valida');
-
-//  }else if (userMail === 'terzo@gmail.com'){
-//   console.log('mail valida');
-//  }else{
-//   console.log('mail non valida')
-//  }
-// }
+    if(userMail === 'primo@gmail.com'){
+      console.log('mail valida');
+      document.getElementById('output-mail').innerHTML = 'Mail valida!' ;
+    }else if (userMail === 'secondo@gmail.com'){
+      console.log('mail valida');
+      document.getElementById('output-mail').innerHTML = 'Mail valida!' ;
+   }else if (userMail === 'terzo@gmail.com'){
+    console.log('mail valida');
+    document.getElementById('output-mail').innerHTML = 'Mail valida!' ;
+   }else{
+    console.log('mail non valida')
+    document.getElementById('output-mail').innerHTML = 'Mail non valida!' ;
+   }
+  }
+})
+ 
 
 // metodo compatto
-
- for(let i = 0 ; i < listaMail.length ; i++){
-   if(userMail === listaMail[i]){
-     console.log('mail valida');
-   }else{
-     console.log('mail non valida');
-   }
-  
-
- }
-
+// sendBtn.addEventListener('click' , function(){
+//   for(let i = 0 ; i < listaMail.length ; i++){
+//     if(userMail === listaMail[i]){
+//       console.log('mail valida');
+//       document.getElementById('output-mail').innerHTML = 'Mail valida!' ;
+//     }else{
+//       console.log('mail non valida');
+//       document.getElementById('output-mail').innerHTML = 'Mail non valida!' ;
+//     }
+//    }
+// })
+ 
 
 
 
