@@ -1,8 +1,8 @@
 // esercizio dell'email 
 
-const listaMail = ['primo@gmail.com' , 'secondo@gmail.com' , 'terzo@gmail.com'];
+ const listaMail = ['primo@gmail.com' , 'secondo@gmail.com' , 'terzo@gmail.com'];
 
-const userMail = prompt('Inserire email');
+ const userMail = prompt('Inserire email');
 
 
 // metodo lungo funzionante
@@ -24,12 +24,28 @@ const userMail = prompt('Inserire email');
 
 // metodo compatto
 
-for(let i = 0 ; i < listaMail.length ; i++){
-  if(userMail === listaMail[i]){
-    console.log('mail valida');
-  }else{
-    console.log('mail non valida');
-  }
+ for(let i = 0 ; i < listaMail.length ; i++){
+   if(userMail === listaMail[i]){
+     console.log('mail valida');
+   }else{
+     console.log('mail non valida');
+   }
   
 
+ }
+
+
+
+
+// esercizio dei dadi
+min = 1 ;
+max = 6 ;
+const nUtente = Math.floor(Math.random() * (max - min + 1) + min);
+const nPc =  Math.floor(Math.random() * (max - min + 1) + min);
+
+if(nUtente < nPc){
+  console.log('Ha vinto il PC');
+
+}else{
+  console.log('Ha vinto il giocatore');
 }
