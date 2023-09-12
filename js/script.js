@@ -2,7 +2,7 @@
 
  const listaMail = ['primo@gmail.com' , 'secondo@gmail.com' , 'terzo@gmail.com'];
  const sendBtn = document.getElementById('send');
- const userMail = document.getElementById('user-mail').value;
+ 
 
 
 // metodo lungo funzionante
@@ -28,7 +28,10 @@
 
 // metodo compatto
 sendBtn.addEventListener('click' , function(){
+  const userMail = document.getElementById('user-mail').value;
+  
   for(let i = 0 ; i < listaMail.length ; i++){
+
     if(userMail === listaMail[i]){
       console.log('mail valida');
       document.getElementById('output-mail').innerHTML = 'Mail valida!' ;
